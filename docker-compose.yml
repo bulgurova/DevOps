@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+
+  db:
+    build: ./database
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: YourStrong!Passw0rd
+      ACCEPT_EULA: Y
