@@ -11,7 +11,7 @@ jobs:
 
     services:
       db:
-        image: mcr.microsoft.com/mssql/server:2019-latest
+        image: postgres:latest
         env:
           SA_PASSWORD: YourStrong!Passw0rd
           ACCEPT_EULA: Y
@@ -31,7 +31,7 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
       - name: Build and run containers
         run: |
-          sudo service mssql stop $$
+          sudo service postgreы stop $$
           docker-compose up 
       
       - name: Wait for the database to be ready
