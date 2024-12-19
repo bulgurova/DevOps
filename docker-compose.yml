@@ -10,7 +10,7 @@ services:
   db:
     build: ./db
     ports:
-      - "1433:1433"
+      - "5050:5050"
     environment:
       SA_PASSWORD: YourStrong!Passw0rd
       ACCEPT_EULA: Y
