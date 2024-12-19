@@ -31,7 +31,6 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
       - name: Build and run containers
         run: |
-          sudo service postgres stop $$
           docker-compose up --build -d
       
       - name: Wait for the database to be ready
