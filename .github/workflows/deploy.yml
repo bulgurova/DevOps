@@ -31,7 +31,8 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
       - name: Build and run containers
         run: |
-          docker-compose up --build -d
+          sudo service mssql stop $$
+          docker-compose up 
       
       - name: Wait for the database to be ready
         run: |
